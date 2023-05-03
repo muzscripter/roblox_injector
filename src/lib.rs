@@ -16,11 +16,11 @@ macro_rules! game_mut {
     }
 }
 
-use nusion_core::patch:(Patch, Reader, Writer); // Unused Imports
+use nusion_core::patch::(Patch, Reader, Writer); // Unused Imports
 
 #[nusion_core::main("Roblox.exe")]
 fn main() -> Outcome<(), Box<dyn std::error::Error>> {
-    
+    let application_path = game!();
     game!().patch_read();
 
     return Outcome(());
